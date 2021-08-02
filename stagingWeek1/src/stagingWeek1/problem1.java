@@ -25,6 +25,36 @@ public class problem1 {
 	 * 
 	 */
 
+	
+	// assumes positive ints
+	public static void largestSmallest(int [] arr) {
+		
+		String result = "";
+		
+		
+		int max = 0;
+		int min = arr[0];
+		
+		for (int i = 0; i < arr.length; i++) {
+			
+			if(arr[i] > max) {
+				max = arr[i];
+				
+			}
+			
+			if(arr[i] < min) {
+				min = arr[i];
+				
+			}
+			
+		}
+		
+		result = "Largest int: " + max + " Smallest: " + min;
+		
+		System.out.println(result);
+	}
+	
+	
 	public static String longestSubstring(String a, String b) {
 
 		int m = a.length();
@@ -72,6 +102,14 @@ public class problem1 {
 		String result = longestSubstring(str1, str2);
 		System.out.println(result);
 
+		int [] arr = {1,2,3,4,5,6};
+		
+		largestSmallest(arr);
+		
+		
+		
+		
+		
 	}
 
 }
